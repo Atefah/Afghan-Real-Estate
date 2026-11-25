@@ -11,9 +11,11 @@ if (menuToggle && mainNavigation) {
   });
   mainNavigation.querySelectorAll('a').forEach((link) => {
     link.addEventListener('click', () => {
-      mainNavigation.classList.remove('is-open');
-      menuToggle.classList.remove('is-open');
-      menuToggle.setAttribute('aria-expanded', 'false');
+      if (!link.dataset.filter) {
+        mainNavigation.classList.remove('is-open');
+        menuToggle.classList.remove('is-open');
+        menuToggle.setAttribute('aria-expanded', 'false');
+      }
     });
   });
 }
@@ -105,5 +107,41 @@ if (contactForm) {
     status.textContent = 'Thank you! Your message has been sent successfully.';
     status.className = 'form-status form-success';
     contactForm.reset();
+  });
+}
+
+// Filter featured properties from the navigation links.
+const featuredGrid = document.querySelector('.property-grid');
+const filterStatus = document.createElement('p');
+filterStatus.className = 'featured-filter-status';
+
+if (featuredGrid) {
+  featuredGrid.parentElement.insertBefore(filterStatus, featuredGrid);
+
+  document.querySelectorAll('.main-nav [data-filter]').forEach((filterLink) => {
+    filterLink.addEventListener('click', () => {
+      const filter = filterLink.dataset.filter;
+      let visibleCount = 0;
+
+      document.querySelectorAll('.property-card').forEach((card) => {
+        const transactions = (card.dataset.transaction || '').split(' ');
+        const isVisible = transactions.includes(filter);
+        card.classList.toggle('is-filter-hidden', !isVisible);
+        if (isVisible) visibleCount += 1;
+      });
+
+      const labels = { buy: 'For sale', sell: 'Properties for sellers', rent: 'For rent' };
+      filterStatus.textContent = `${labels[filter]} — ${visibleCount} ${visibleCount === 1 ? 'property' : 'properties'} found`;
+
+      document.querySelectorAll('.main-nav [data-filter]').forEach((link) => link.classList.remove('active-filter'));
+      filterLink.classList.add('active-filter');
+    });
+  });
+
+  const viewAllLink = document.querySelector('#view-all-properties');
+  viewAllLink?.addEventListener('click', () => {
+    document.querySelectorAll('.property-card').forEach((card) => card.classList.remove('is-filter-hidden'));
+    filterStatus.textContent = 'Showing all featured properties';
+    document.querySelectorAll('.main-nav [data-filter]').forEach((link) => link.classList.remove('active-filter'));
   });
 }

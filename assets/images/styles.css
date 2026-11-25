@@ -343,3 +343,8 @@ button, input, select, textarea { font: inherit; }
   .main-nav.is-open ul { display: grid; grid-template-columns: repeat(2, 1fr); width: 100%; min-width: 0; padding: 12px 0; }
   .modal-content > img { height: 220px; }
 }
+
+.property-card.is-filter-hidden { display: none; }
+.featured-filter-status { margin: -16px 0 20px; color: var(--muted); font-size: 14px; }
+
+.main-nav a.active-filter { color: var(--gold-dark); border-bottom: 2px solid var(--gold); }

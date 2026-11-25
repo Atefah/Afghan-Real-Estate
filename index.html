@@ -32,9 +32,9 @@
         <nav class="main-nav" id="main-navigation" aria-label="Main navigation">
           <ul>
             <li><a href="#home">Home</a></li>
-            <li><a href="#featured-properties">Buy</a></li>
-            <li><a href="#featured-properties">Sell</a></li>
-            <li><a href="#featured-properties">Rent</a></li>
+            <li><a href="#featured-properties" data-filter="buy">Buy</a></li>
+            <li><a href="#featured-properties" data-filter="sell">Sell</a></li>
+            <li><a href="#featured-properties" data-filter="rent">Rent</a></li>
             <li><a href="#services">Mortgage</a></li>
           </ul>
         </nav>
@@ -160,11 +160,11 @@
         <div class="container">
           <div class="section-heading">
             <h2>Featured properties</h2>
-            <a href="#featured-properties">View all</a>
+            <a href="#featured-properties" id="view-all-properties">View all</a>
           </div>
 
           <div class="property-grid">
-            <article class="property-card">
+            <article class="property-card" data-transaction="buy sell">
               <img src="https://images.unsplash.com/photo-1568605114967-8130f3a36994?auto=format&fit=crop&w=900&q=80" alt="Luxury villa in Kabul" width="400" height="260" />
               <div class="property-card-body">
                 <span class="label">For sale</span>
@@ -179,7 +179,7 @@
               </div>
             </article>
 
-            <article class="property-card">
+            <article class="property-card" data-transaction="rent">
               <img src="https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=900&q=80" alt="Apartment in Herat" width="400" height="260" />
               <div class="property-card-body">
                 <span class="label">For rent</span>
@@ -194,7 +194,7 @@
               </div>
             </article>
 
-            <article class="property-card">
+            <article class="property-card" data-transaction="buy sell">
               <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=900&q=80" alt="Commercial land in Mazar-i-Sharif" width="400" height="260" />
               <div class="property-card-body">
                 <span class="label">For sale</span>
@@ -209,7 +209,7 @@
               </div>
             </article>
 
-            <article class="property-card">
+            <article class="property-card" data-transaction="mortgage">
               <img src="https://images.unsplash.com/photo-1448630360428-65456885c650?auto=format&fit=crop&w=900&q=80" alt="House with garden in Kandahar" width="400" height="260" />
               <div class="property-card-body">
                 <span class="label">For mortgage</span>
