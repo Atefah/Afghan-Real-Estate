@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Afghan Real Estate agency for buying, selling, renting, and mortgage properties across Afghanistan"
+    />
+    <title>Afghan Real Estate | Property in Afghanistan</title>
+    <link rel="stylesheet" href="assets/images/styles.css" />
+  </head>
+  <body>
+    <!-- Main header with logo, navigation, and contact information -->
+    <header class="site-header" id="header">
+      <div class="container">
+        <a href="#home" class="brand" aria-label="Back to homepage">
+          <svg viewBox="0 0 120 60" width="120" height="60" aria-label="Afghan Real Estate logo" role="img">
+            <rect x="0" y="0" width="120" height="60" rx="10" fill="#0f172a"></rect>
+            <path d="M18 35 L30 24 L42 35" fill="none" stroke="#fbbf24" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"></path>
+            <path d="M22 34 L22 43 L38 43 L38 34" fill="none" stroke="#f8fafc" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
+            <path d="M46 24 H76 L86 31 V43 H46 Z" fill="#fbbf24" opacity="0.9"></path>
+            <text x="50" y="34" fill="#0f172a" font-size="11" font-weight="700" font-family="Arial, sans-serif">A</text>
+          </svg>
+          <span>Afghan Real Estate</span>
+        </a>
+
+        <nav class="main-nav" aria-label="Main navigation">
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#featured-properties">Buy</a></li>
+            <li><a href="#featured-properties">Sell</a></li>
+            <li><a href="#featured-properties">Rent</a></li>
+            <li><a href="#services">Mortgage</a></li>
+          </ul>
+        </nav>
+
+        <div class="header-contact">
+          <a href="tel:+93700000000" dir="ltr">+93 700 000 000</a>
+          <a href="mailto:info@afghanrealestate.com">info@afghanrealestate.com</a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- Hero section for property search and featured listing -->
+      <section class="hero" id="home">
+        <div class="container">
+          <div class="hero-content">
+            <p class="eyebrow">Buy, sell and rent property in Afghanistan</p>
+            <h1>Your trusted partner for buying and selling property across Afghanistan</h1>
+            <p>
+              From Kabul to Herat, Mazar-i-Sharif and Kandahar, we help you find the
+              best property based on your needs, budget, and location.
+            </p>
+
+            <form class="property-search" action="#" method="get" aria-label="Property search">
+              <div class="form-row">
+                <div class="field">
+                  <label for="province">Province</label>
+                  <select id="province" name="province">
+                    <option value="">All provinces</option>
+                    <option value="kabul">Kabul</option>
+                    <option value="herat">Herat</option>
+                    <option value="mazar">Mazar-i-Sharif</option>
+                    <option value="kandahar">Kandahar</option>
+                    <option value="other">Other provinces</option>
+                  </select>
+                </div>
+
+                <div class="field">
+                  <label for="city">City</label>
+                  <select id="city" name="city">
+                    <option value="">All cities</option>
+                    <option value="kabul">Kabul</option>
+                    <option value="herat">Herat</option>
+                    <option value="mazar">Mazar-i-Sharif</option>
+                    <option value="kandahar">Kandahar</option>
+                    <option value="other">Other cities</option>
+                  </select>
+                </div>
+
+                <div class="field">
+                  <label for="property-type">Property type</label>
+                  <select id="property-type" name="property_type">
+                    <option value="">All</option>
+                    <option value="villa">Villa</option>
+                    <option value="apartment">Apartment</option>
+                    <option value="house">House</option>
+                    <option value="land">Land</option>
+                    <option value="garden">Garden</option>
+                    <option value="commercial">Commercial</option>
+                  </select>
+                </div>
+
+                <div class="field">
+                  <label for="transaction-type">Transaction type</label>
+                  <select id="transaction-type" name="transaction_type">
+                    <option value="">All</option>
+                    <option value="buy">Buy</option>
+                    <option value="sell">Sell</option>
+                    <option value="rent">Rent</option>
+                    <option value="mortgage">Mortgage</option>
+                  </select>
+                </div>
+
+                <div class="field">
+                  <label for="min-price">Minimum price</label>
+                  <input
+                    id="min-price"
+                    name="min_price"
+                    type="number"
+                    min="0"
+                    placeholder="e.g. 50000"
+                  />
+                </div>
+
+                <div class="field">
+                  <label for="max-price">Maximum price</label>
+                  <input
+                    id="max-price"
+                    name="max_price"
+                    type="number"
+                    min="0"
+                    placeholder="e.g. 500000"
+                  />
+                </div>
+
+                <div class="field field-submit">
+                  <button type="submit">Search</button>
+                </div>
+              </div>
+            </form>
+          </div>
+
+          <div class="hero-visual" aria-label="Afghanistan map and featured property">
+            <div class="map-placeholder" aria-label="Map of Afghanistan">
+              <span>Afghanistan map</span>
+            </div>
+
+            <article class="featured-property-spotlight">
+              <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=900&q=80" alt="Featured property in Kabul" width="600" height="360" />
+              <div class="spotlight-content">
+                <span class="badge">Featured</span>
+                <h2>Modern villa in Kabul</h2>
+                <p class="price">$850,000</p>
+                <p>Location: Kabul, District 16</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Featured properties section with multiple listings -->
+      <section class="featured-properties" id="featured-properties">
+        <div class="container">
+          <div class="section-heading">
+            <h2>Featured properties</h2>
+            <a href="#featured-properties">View all</a>
+          </div>
+
+          <div class="property-grid">
+            <article class="property-card">
+              <img src="https://images.unsplash.com/photo-1568605114967-8130f3a36994?auto=format&fit=crop&w=900&q=80" alt="Luxury villa in Kabul" width="400" height="260" />
+              <div class="property-card-body">
+                <span class="label">For sale</span>
+                <h3>Luxury villa in North Kabul</h3>
+                <p class="property-price">$920,000</p>
+                <p class="property-location">Kabul, District 10</p>
+                <ul class="property-meta">
+                  <li>4 bedrooms</li>
+                  <li>3 bathrooms</li>
+                  <li>250 sqm</li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="property-card">
+              <img src="https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=900&q=80" alt="Apartment in Herat" width="400" height="260" />
+              <div class="property-card-body">
+                <span class="label">For rent</span>
+                <h3>Modern apartment in Herat</h3>
+                <p class="property-price">$1,800/month</p>
+                <p class="property-location">Herat, downtown</p>
+                <ul class="property-meta">
+                  <li>3 bedrooms</li>
+                  <li>2 bathrooms</li>
+                  <li>120 sqm</li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="property-card">
+              <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=900&q=80" alt="Commercial land in Mazar-i-Sharif" width="400" height="260" />
+              <div class="property-card-body">
+                <span class="label">For sale</span>
+                <h3>Commercial land in Mazar-i-Sharif</h3>
+                <p class="property-price">$600,000</p>
+                <p class="property-location">Mazar-i-Sharif, new city</p>
+                <ul class="property-meta">
+                  <li>500 sqm</li>
+                  <li>Prime location</li>
+                  <li>Commercial</li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="property-card">
+              <img src="https://images.unsplash.com/photo-1448630360428-65456885c650?auto=format&fit=crop&w=900&q=80" alt="House with garden in Kandahar" width="400" height="260" />
+              <div class="property-card-body">
+                <span class="label">For mortgage</span>
+                <h3>House with garden in Kandahar</h3>
+                <p class="property-price">$450,000</p>
+                <p class="property-location">Kandahar, District 2</p>
+                <ul class="property-meta">
+                  <li>3 bedrooms</li>
+                  <li>2 bathrooms</li>
+                  <li>Private garden</li>
+                </ul>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Main property category section -->
+      <section class="property-categories" id="property-categories">
+        <div class="container">
+          <div class="section-heading">
+            <h2>Property categories</h2>
+          </div>
+
+          <div class="category-grid">
+            <article class="category-card">
+              <div class="category-icon" aria-hidden="true">🏠</div>
+              <h3>Houses</h3>
+              <p>Private homes, villas, and duplexes with premium quality.</p>
+            </article>
+
+            <article class="category-card">
+              <div class="category-icon" aria-hidden="true">🏢</div>
+              <h3>Apartments</h3>
+              <p>Modern apartments for living and investment purposes.</p>
+            </article>
+
+            <article class="category-card">
+              <div class="category-icon" aria-hidden="true">🗺️</div>
+              <h3>Land</h3>
+              <p>Residential, commercial, and industrial plots in different areas.</p>
+            </article>
+
+            <article class="category-card">
+              <div class="category-icon" aria-hidden="true">🌳</div>
+              <h3>Gardens</h3>
+              <p>Peaceful and private garden properties for family living.</p>
+            </article>
+
+            <article class="category-card">
+              <div class="category-icon" aria-hidden="true">🏬</div>
+              <h3>Commercial properties</h3>
+              <p>Offices, shops, and commercial buildings in prime locations.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Properties by city section -->
+      <section class="city-properties" id="city-properties">
+        <div class="container">
+          <div class="section-heading">
+            <h2>Properties by city</h2>
+          </div>
+
+          <div class="city-grid">
+            <article class="city-card">
+              <img src="https://images.unsplash.com/photo-1523217582562-09d0def993a6?auto=format&fit=crop&w=900&q=80" alt="Properties in Kabul" width="300" height="220" />
+              <h3>Kabul</h3>
+              <p>Modern homes and apartments in the city’s key districts.</p>
+            </article>
+
+            <article class="city-card">
+              <img src="https://images.unsplash.com/photo-1484154218962-a197022b5858?auto=format&fit=crop&w=900&q=80" alt="Properties in Herat" width="300" height="220" />
+              <h3>Herat</h3>
+              <p>Residential and commercial properties with affordable prices and great locations.</p>
+            </article>
+
+            <article class="city-card">
+              <img src="https://images.unsplash.com/photo-1460317442991-0ec209397118?auto=format&fit=crop&w=900&q=80" alt="Properties in Mazar-i-Sharif" width="300" height="220" />
+              <h3>Mazar-i-Sharif</h3>
+              <p>Promising opportunities in land and home purchases.</p>
+            </article>
+
+            <article class="city-card">
+              <img src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?auto=format&fit=crop&w=900&q=80" alt="Properties in Kandahar" width="300" height="220" />
+              <h3>Kandahar</h3>
+              <p>Family homes, commercial spaces, and villas in the city.</p>
+            </article>
+
+            <article class="city-card city-card--wide">
+              <img
+                src="https://images.unsplash.com/photo-1523217582562-09d0def993a6?auto=format&fit=crop&w=1200&q=80"
+                alt="Properties in other Afghan cities"
+                width="600"
+                height="220"
+              />
+              <h3>Other Afghan cities</h3>
+              <p>Properties in cities such as Balkh, Bamyan, Nangarhar, and more.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- About us section -->
+      <section class="about-us" id="about-us">
+        <div class="container">
+          <div class="about-layout">
+            <div class="about-content">
+              <h2>About us</h2>
+              <p>
+                Afghan Real Estate is one of the most active real estate agencies in Afghanistan,
+                dedicated to providing secure, transparent, and professional property services to our clients.
+              </p>
+              <p>
+                With a team of experienced specialists who understand the real estate market, we help
+                buyers, sellers, tenants, and mortgage applicants make informed decisions.
+              </p>
+            </div>
+
+            <div class="about-visual">
+              <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1200&q=80" alt="Afghan Real Estate team" width="500" height="360" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Main service section -->
+      <section class="services" id="services">
+        <div class="container">
+          <div class="section-heading">
+            <h2>Our services</h2>
+          </div>
+
+          <div class="services-grid">
+            <article class="service-card">
+              <div class="service-icon" aria-hidden="true">🛍️</div>
+              <h3>Buying</h3>
+              <p>Finding the right property within your budget and requirements through expert guidance.</p>
+            </article>
+
+            <article class="service-card">
+              <div class="service-icon" aria-hidden="true">💰</div>
+              <h3>Selling</h3>
+              <p>Professional marketing to help you sell quickly and at a fair value.</p>
+            </article>
+
+            <article class="service-card">
+              <div class="service-icon" aria-hidden="true">🔑</div>
+              <h3>Renting</h3>
+              <p>Helping you find the ideal apartment or home for short-term or long-term living.</p>
+            </article>
+
+            <article class="service-card">
+              <div class="service-icon" aria-hidden="true">🏦</div>
+              <h3>Mortgage</h3>
+              <p>Support in mortgage agreements, contract review, and choosing the right option.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Customer feedback and reviews -->
+      <section class="testimonials" id="testimonials">
+        <div class="container">
+          <div class="section-heading">
+            <h2>Testimonials</h2>
+          </div>
+
+          <div class="testimonial-grid">
+            <article class="testimonial-card">
+              <p>
+                “With the Afghan Real Estate team, we found the property we wanted in the shortest time,
+                and the buying process was highly professional and transparent.”
+              </p>
+              <div class="customer">
+                <h3>Abdullah Ahmadi</h3>
+                <span>Buyer</span>
+              </div>
+            </article>
+
+            <article class="testimonial-card">
+              <p>
+                “Their services for selling our home were excellent, and with the right marketing,
+                the property sold quickly.”
+              </p>
+              <div class="customer">
+                <h3>Fariba Rahimi</h3>
+                <span>Seller</span>
+              </div>
+            </article>
+
+            <article class="testimonial-card">
+              <p>
+                “The guidance for choosing the right apartment for rent was accurate and fair,
+                and the rental contract process was clear and well explained.”
+              </p>
+              <div class="customer">
+                <h3>Saeed Nouri</h3>
+                <span>Tenant</span>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact section with information and form -->
+      <section class="contact" id="contact">
+        <div class="container">
+          <div class="contact-layout">
+            <div class="contact-info">
+              <h2>Contact us</h2>
+              <p>
+                For advice, property viewing, and arranging visits, please get in touch with us.
+              </p>
+
+              <ul class="contact-list">
+                <li><strong>Address:</strong> Kabul, Panshir Street, Afghan Real Estate Building</li>
+                <li><strong>Phone:</strong> <span dir="ltr">+93 700 000 000</span></li>
+                <li><strong>Email:</strong> info@afghanrealestate.com</li>
+                <li><strong>Working hours:</strong> Saturday to Thursday, 9:00 AM to 6:00 PM</li>
+              </ul>
+            </div>
+
+            <div class="contact-form-wrap">
+              <form class="contact-form" action="#" method="post">
+                <div class="form-row">
+                  <div class="field">
+                    <label for="name">Full name</label>
+                    <input id="name" name="name" type="text" placeholder="Your name" />
+                  </div>
+
+                  <div class="field">
+                    <label for="email">Email</label>
+                    <input
+                      id="email"
+                      name="email"
+                      type="email"
+                      placeholder="example@email.com"
+                    />
+                  </div>
+
+                  <div class="field">
+                    <label for="phone">Phone</label>
+                    <input
+                      id="phone"
+                      name="phone"
+                      type="tel"
+                      placeholder="+93 700 000 000"
+                    />
+                  </div>
+
+                  <div class="field field-full">
+                    <label for="message">Message</label>
+                    <textarea
+                      id="message"
+                      name="message"
+                      rows="5"
+                      placeholder="Write your message..."
+                    ></textarea>
+                  </div>
+
+                  <div class="field field-full">
+                    <button type="submit">Send message</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Main footer with company information, navigation, and social links -->
+    <footer class="site-footer" id="footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <a href="#home" class="brand">
+              <svg viewBox="0 0 120 60" width="120" height="60" aria-label="Afghan Real Estate logo" role="img">
+                <rect x="0" y="0" width="120" height="60" rx="10" fill="#0f172a"></rect>
+                <path d="M18 35 L30 24 L42 35" fill="none" stroke="#fbbf24" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"></path>
+                <path d="M22 34 L22 43 L38 43 L38 34" fill="none" stroke="#f8fafc" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
+                <path d="M46 24 H76 L86 31 V43 H46 Z" fill="#fbbf24" opacity="0.9"></path>
+                <text x="50" y="34" fill="#0f172a" font-size="11" font-weight="700" font-family="Arial, sans-serif">A</text>
+              </svg>
+              <span>Afghan Real Estate</span>
+            </a>
+            <p>
+              A specialized real estate agency for buying, selling, renting, and mortgaging properties across Afghanistan.
+            </p>
+          </div>
+
+          <div class="footer-links">
+            <h3>Quick links</h3>
+            <ul>
+              <li><a href="#home">Home</a></li>
+              <li><a href="#featured-properties">Featured properties</a></li>
+              <li><a href="#property-categories">Categories</a></li>
+              <li><a href="#about-us">About us</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-contact">
+            <h3>Contact info</h3>
+            <ul>
+              <li>Kabul, Afghanistan</li>
+              <li dir="ltr">+93 700 000 000</li>
+              <li>info@afghanrealestate.com</li>
+            </ul>
+          </div>
+
+          <div class="footer-social">
+            <h3>Social media</h3>
+            <ul>
+              <li><a href="#" aria-label="Facebook">Facebook</a></li>
+              <li><a href="#" aria-label="Instagram">Instagram</a></li>
+              <li><a href="#" aria-label="Telegram">Telegram</a></li>
+              <li><a href="#" aria-label="LinkedIn">LinkedIn</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>© 2026 Afghan Real Estate. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
